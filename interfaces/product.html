@@ -34,33 +34,43 @@
         };
     </script>
 </head>
+
 <body class="bg-background-light dark:bg-background-dark font-body text-text-main-light dark:text-text-main-dark antialiased transition-colors duration-300">
-<nav class="sticky top-0 z-50 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-stone-200 dark:border-stone-800">
-<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="flex items-center justify-between h-20">
-<div class="flex-shrink-0 flex flex-col items-center">
-<span class="font-display text-3xl tracking-widest uppercase text-primary dark:text-white">Marée</span>
-<span class="text-[0.6rem] tracking-[0.3em] uppercase text-stone-500 dark:text-stone-400">Love at first Crêpe</span>
-</div>
-<div class="hidden md:block">
-<div class="ml-10 flex items-baseline space-x-8">
-<a class="text-primary dark:text-white hover:text-secondary px-3 py-2 rounded-md text-sm font-medium tracking-wide uppercase" href="#">Menú</a>
-<a class="text-stone-500 dark:text-stone-400 hover:text-primary dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium tracking-wide uppercase" href="#">Historia</a>
-<a class="text-stone-500 dark:text-stone-400 hover:text-primary dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium tracking-wide uppercase" href="#">Contacto</a>
-</div>
-</div>
-<div class="flex items-center gap-4">
-<button class="p-2 text-stone-600 dark:text-stone-300 hover:bg-stone-200 dark:hover:bg-stone-700 rounded-full transition-colors" onclick="document.documentElement.classList.toggle('dark')">
-<span class="material-icons text-xl">brightness_4</span>
+<header class="sticky top-0 z-50 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm border-b border-primary/20 dark:border-primary/10 shadow-sm">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-24">
+<button class="p-2 -ml-2 rounded-md lg:hidden text-text-main dark:text-text-light hover:bg-primary/10 transition-colors">
+<span class="material-icons">menu</span>
 </button>
-<button class="p-2 relative text-primary dark:text-white">
-<span class="material-icons">shopping_bag</span>
-<span class="absolute top-0 right-0 inline-flex items-center justify-center px-1.5 py-0.5 text-xs font-bold leading-none text-white transform translate-x-1/4 -translate-y-1/4 bg-secondary rounded-full">2</span>
-</button>
+<div class="flex-shrink-0 flex flex-col items-center justify-center w-full lg:w-auto text-center">
+<h1 class="font-display text-4xl tracking-widest text-text-main dark:text-white uppercase font-bold">MARÉE</h1>
+<div class="flex items-center space-x-2 mt-1">
+<span class="h-[1px] w-8 bg-text-main dark:bg-gray-400"></span>
+<p class="text-xs uppercase tracking-[0.2em] font-light text-text-main dark:text-gray-300">Love at first <span class="font-semibold text-accent">crêpe</span></p>
+<span class="h-[1px] w-8 bg-text-main dark:bg-gray-400"></span>
 </div>
 </div>
-</div>
+<nav class="hidden lg:flex space-x-8 items-center">
+<a class="text-primary font-bold transition-colors text-sm tracking-wide border-b-2 border-primary pb-1" href="./menu.html">MENÚ</a>
+<a class="text-text-main dark:text-text-light hover:text-primary transition-colors font-medium text-sm tracking-wide" href="./lotaltycard.html">LOYALTY</a>
+<a class="text-text-main dark:text-text-light hover:text-primary transition-colors font-medium text-sm tracking-wide" href="#">CONTACTO</a>
 </nav>
+<div class="hidden lg:flex items-center space-x-4">
+<a href="./shoppingCart.html">
+<button class="relative p-2 rounded-full hover:bg-primary/10 transition-colors text-text-main dark:text-text-light">
+<span class="material-icons">shopping_bag</span>
+<span class="absolute top-1 right-1 w-2 h-2 bg-primary rounded-full"></span>
+</button>
+</a>
+</div>
+<div class="flex lg:hidden items-center">
+<button class="relative p-2 rounded-full hover:bg-primary/10 transition-colors text-text-main dark:text-text-light">
+<span class="material-icons">shopping_bag</span>
+</button>
+</div>
+</div>
+</div>
+</header>
 <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 pb-32">
 <div class="relative rounded-2xl overflow-hidden shadow-xl mb-12 group">
 <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors z-10"></div>
@@ -249,5 +259,25 @@
 </button>
 </div>
 </div>
+<footer class="mt-20 border-t border-[#E5E0D8] py-12 bg-background-beige">
+<div class="max-w-[1100px] mx-auto px-4 md:px-8 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-3">
+<span class="text-text-charcoal font-bold text-2xl font-serif tracking-wide">MARÉE</span>
+<span class="text-gray-400 text-sm font-light">|</span>
+<span class="text-gray-500 text-sm font-light tracking-wide">Love at first crêpe</span>
+</div>
+<div class="flex gap-8">
+<a class="text-gray-400 hover:text-primary transition-colors" href="#">
+<span class="sr-only">Instagram</span>
+<svg class="size-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+</a>
+<a class="text-gray-400 hover:text-primary transition-colors" href="#">
+<span class="sr-only">Facebook</span>
+<svg class="size-5" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg>
+</a>
+</div>
+<p class="text-gray-400 text-xs font-light">© 2023 MARÉE. Todos los derechos reservados.</p>
+</div>
+</footer>
 
 </body></html>

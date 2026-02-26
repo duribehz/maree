@@ -13,6 +13,7 @@
                 extend: {
                     colors: {
                         "primary": "#3E3E3E", // Deep Charcoal Black for main CTA
+                        secondary: "#EACCCC",
                         "accent": "#6C859D", // Desaturated Steel Blue
                         "background-beige": "#F5F2EB", // Clean Sand Beige
                         "card-light": "#FFFAF9", // Soft White / Very Light Powder Pink hint
@@ -44,24 +45,34 @@
     </style>
 </head>
 <body class="bg-background-beige font-display antialiased text-text-charcoal min-h-screen flex flex-col">
-<header class="flex items-center justify-between whitespace-nowrap border-b border-[#E5E0D8] bg-background-beige/95 backdrop-blur-sm px-8 py-5 sticky top-0 z-50">
-<div class="flex items-center gap-4">
-<h2 class="text-text-charcoal text-2xl font-bold tracking-wide font-serif">MARÉE</h2>
+<header class="sticky top-0 z-50 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm border-b border-primary/20 dark:border-primary/10 shadow-sm">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-24">
+<button class="p-2 -ml-2 rounded-md lg:hidden text-text-main dark:text-text-light hover:bg-primary/10 transition-colors">
+<span class="material-icons">menu</span>
+</button>
+<div class="flex-shrink-0 flex flex-col items-center justify-center w-full lg:w-auto text-center">
+<h1 class="font-display text-4xl tracking-widest text-text-main dark:text-white uppercase font-bold">MARÉE</h1>
+<div class="flex items-center space-x-2 mt-1">
+<span class="h-[1px] w-8 bg-text-main dark:bg-gray-400"></span>
+<p class="text-xs uppercase tracking-[0.2em] font-light text-text-main dark:text-gray-300">Love at first <span class="text-secondary font-semibold">crêpe</span></p>
+<span class="h-[1px] w-8 bg-text-main dark:bg-gray-400"></span>
 </div>
-<nav class="hidden md:flex flex-1 justify-center gap-12">
-<a class="text-gray-600 hover:text-accent transition-colors text-sm font-medium tracking-wide uppercase" href="#">Menú</a>
-<a class="text-gray-600 hover:text-accent transition-colors text-sm font-medium tracking-wide uppercase" href="#">Nosotros</a>
-<a class="text-gray-600 hover:text-accent transition-colors text-sm font-medium tracking-wide uppercase" href="#">Contacto</a>
+</div>
+<nav class="hidden lg:flex space-x-8 items-center">
+<a class="text-primary font-bold transition-colors text-sm tracking-wide border-b-2 border-primary pb-1" href="./menu.html">MENÚ</a>
+<a class="text-text-main dark:text-text-light hover:text-primary transition-colors font-medium text-sm tracking-wide" href="./lotaltycard.html">LOYALTY</a>
+<a class="text-text-main dark:text-text-light hover:text-primary transition-colors font-medium text-sm tracking-wide" href="#">CONTACTO</a>
 </nav>
-<div class="flex items-center gap-4">
-<button class="relative flex items-center justify-center rounded-full size-10 text-text-charcoal hover:bg-[#EAE4D8] transition-colors">
-<span class="material-symbols-outlined">shopping_bag</span>
-<span class="absolute top-2 right-2 size-2 bg-accent rounded-full"></span>
+<div class="hidden lg:flex items-center space-x-4">
+<a href="./shoppingCart.html">
+</a>
+</div>
+<div class="flex lg:hidden items-center">
+<button class="relative p-2 rounded-full hover:bg-primary/10 transition-colors text-text-main dark:text-text-light">
 </button>
-<button class="flex items-center justify-center rounded-full size-10 text-text-charcoal hover:bg-[#EAE4D8] transition-colors">
-<span class="material-symbols-outlined">person</span>
-</button>
-<div class="hidden md:block bg-center bg-no-repeat bg-cover rounded-full size-9 border border-[#E5E0D8] ml-2" data-alt="User profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDQrGr7kCWN6pLR6ZlC7ZRmA1yHNQ0m51J7D3OUtw_o5ymY2il4F45_9v1lT-QYaXFQmaN6rQxa3MqvktO_tU48ws8QfzxGyvC5tCkf91Uoqd0CTHKRrupnTq5_EsiSaeeIOmKfwG2uElajuc16ZYvSguV3HFGQUwnV2D3YKKJPRy68ugCPQttzeUJadmOYZZ8luQKGKMYlnKMW-pVmAezHa6R5ovxhw6AXqRB2smdCNcIGcLHOHrDrTU06_4PPZyDUKIjJYEOy2_r0");'></div>
+</div>
+</div>
 </div>
 </header>
 <main class="flex-grow w-full max-w-[1100px] mx-auto p-4 md:p-10">
@@ -78,49 +89,14 @@
 <div class="group flex flex-col sm:flex-row items-center sm:items-stretch gap-6 bg-card-light p-6 rounded-xl shadow-[0_2px_15px_-3px_rgba(0,0,0,0.03)] border border-[#EEE5E5] transition-all hover:shadow-md">
 <div class="relative w-28 h-28 shrink-0">
 <div class="absolute inset-0 rounded-full border border-white shadow-sm overflow-hidden">
-<div class="w-full h-full bg-center bg-no-repeat bg-cover" data-alt="Crepa de Nutella y Fresa" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBAQBZUJtKf204uPouCebIIWDqaJAIVjFW3MJ72--kdUdSNi04ok1YUp3UFZ6H_IR9crR0s3wBLZSTUhDqZm3Em7UNkrKkV8pAKKcTMOM3lFmLJ9OKvEdvEbgVLphELvicik5KY8KpwdQTwAKrbW_YwAFESCHPTB2kLE3xZ7Vd9zC0g_PetkhbbfBcai7dAOasoGBq7IzcoSsVcUDcEn3iBhmqrTfY9ykgdpRWbmfJCF6CLsrkDX42U0sTISu-M61bZaC4rPUO_lON1");'></div>
+<div class="w-full h-full bg-center bg-no-repeat bg-cover" data-alt="Waffle Belga Clásico" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBPdAnEl_dsvF6-lbhPWaoJMTRY1Ku0Bo8Nhb7aFC5vQXQJryzqRZuaHmuiyNz8vONjVOeq6K1YuJjCN9FLqaDOHH1puD2HZIMjrWgJm0rrdvG8zMD_HScaj-xXX01HQ_Zed99MB-lIynxuFw8c7EmUcGLd4OT9obwpMH1XhC-Wlknr_Hvr8a88Jm0e4BRHKci7QuNlIF-1e84KlQNmFJoLw0fyWe5S7iNPvczKf57gjI15MaVkzHRjT1jD81YolNMkmngBXf3GVs02");'></div>
 </div>
 </div>
 <div class="flex flex-1 flex-col justify-between w-full text-center sm:text-left">
 <div class="flex flex-col sm:flex-row justify-between items-start gap-2">
 <div>
-<h3 class="text-text-charcoal text-xl font-serif font-medium">Crepa de Nutella y Fresa</h3>
-<p class="text-gray-500 text-sm mt-1 font-light">Masa clásica, fresas frescas, doble chocolate.</p>
-</div>
-<button class="text-gray-400 hover:text-red-400 transition-colors p-1 self-center sm:self-start">
-<span class="material-symbols-outlined text-[20px]">close</span>
-</button>
-</div>
-<div class="flex flex-col sm:flex-row justify-between items-center sm:items-end mt-4 sm:mt-0 gap-4">
-<button class="text-accent hover:text-text-charcoal text-xs font-medium tracking-wide border-b border-accent/30 hover:border-text-charcoal pb-0.5 transition-colors uppercase">
-                                Modificar
-                            </button>
-<div class="flex items-center gap-8">
-<div class="flex items-center gap-3">
-<button class="size-8 flex items-center justify-center rounded-full border border-accent/20 text-accent hover:border-accent hover:bg-accent hover:text-white transition-all">
-<span class="material-symbols-outlined text-[16px]">remove</span>
-</button>
-<span class="w-6 text-center text-text-charcoal font-medium text-lg">2</span>
-<button class="size-8 flex items-center justify-center rounded-full border border-accent/20 text-accent hover:border-accent hover:bg-accent hover:text-white transition-all">
-<span class="material-symbols-outlined text-[16px]">add</span>
-</button>
-</div>
-<p class="text-text-charcoal text-lg font-serif font-medium tabular-nums min-w-[80px] text-right">$170.00</p>
-</div>
-</div>
-</div>
-</div>
-<div class="group flex flex-col sm:flex-row items-center sm:items-stretch gap-6 bg-card-light p-6 rounded-xl shadow-[0_2px_15px_-3px_rgba(0,0,0,0.03)] border border-[#EEE5E5] transition-all hover:shadow-md">
-<div class="relative w-28 h-28 shrink-0">
-<div class="absolute inset-0 rounded-full border border-white shadow-sm overflow-hidden">
-<div class="w-full h-full bg-center bg-no-repeat bg-cover" data-alt="Waffle Belga Clásico" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCDuEccfF-bk8Q-jYv3Hdh9fiMttAMQxlrEk_ieC_f0mSdBg8rGpRaBSRWMeBOWx4ced6swaidDVSQRR61EShaN7QTrj3LBVSZ-gGpWl2qnb22VmIeWhbpSJqFhcSVFEpY2C2DdVlI_4EJOhIzyYSulE9O0Rz4Fd5dHqOLvRNushH42KAPnUYjR2_RKh9MQRr6kB93gB9zp5IXFwY-GHiwHmxlK70njX8CiVWsB6jLvRI3mA3hrXqRQe1BF1J5U7Iy6Gs5EHZo2uLUY");'></div>
-</div>
-</div>
-<div class="flex flex-1 flex-col justify-between w-full text-center sm:text-left">
-<div class="flex flex-col sm:flex-row justify-between items-start gap-2">
-<div>
-<h3 class="text-text-charcoal text-xl font-serif font-medium">Waffle Belga Clásico</h3>
-<p class="text-gray-500 text-sm mt-1 font-light">Con miel de maple orgánica y mantequilla.</p>
+<h3 class="text-text-charcoal text-xl font-serif font-medium">Crepa Personalizada</h3>
+<p class="text-gray-500 text-sm mt-1 font-light">Fresa, Nutella.</p>
 </div>
 <button class="text-gray-400 hover:text-red-400 transition-colors p-1 self-center sm:self-start">
 <span class="material-symbols-outlined text-[20px]">close</span>
@@ -140,42 +116,7 @@
 <span class="material-symbols-outlined text-[16px]">add</span>
 </button>
 </div>
-<p class="text-text-charcoal text-lg font-serif font-medium tabular-nums min-w-[80px] text-right">$95.00</p>
-</div>
-</div>
-</div>
-</div>
-<div class="group flex flex-col sm:flex-row items-center sm:items-stretch gap-6 bg-card-light p-6 rounded-xl shadow-[0_2px_15px_-3px_rgba(0,0,0,0.03)] border border-[#EEE5E5] transition-all hover:shadow-md">
-<div class="relative w-28 h-28 shrink-0">
-<div class="absolute inset-0 rounded-full border border-white shadow-sm overflow-hidden">
-<div class="w-full h-full bg-center bg-no-repeat bg-cover" data-alt="Latte Helado de Vainilla" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCaoZcM80DxaSSLaMPrf5WQ7HeCnKlSbR_-MVlsoJNq6NpIXO6XO77oGraRD7rcXKPXLy-RcpSusTSmONnFLKktMe6F2M4Vrrbov-bvq7WVG1vRmbXz_gzn6QVy4jRqCIhjclRxl8U4SsFHCTtRT8dNYFdsnsJ9PRSFHrl6Bu7JosaIruRRalSQmZL7vAZm6NUw_EphsGm8eZchcCBL4mV4uohlMJTFx6zDwYUqBdhGmJm8MBGVB5qyaUQpBZ_JYOEuh-v8ksWv7bwK");'></div>
-</div>
-</div>
-<div class="flex flex-1 flex-col justify-between w-full text-center sm:text-left">
-<div class="flex flex-col sm:flex-row justify-between items-start gap-2">
-<div>
-<h3 class="text-text-charcoal text-xl font-serif font-medium">Latte Helado de Vainilla</h3>
-<p class="text-gray-500 text-sm mt-1 font-light">Leche de almendras, sin azúcar.</p>
-</div>
-<button class="text-gray-400 hover:text-red-400 transition-colors p-1 self-center sm:self-start">
-<span class="material-symbols-outlined text-[20px]">close</span>
-</button>
-</div>
-<div class="flex flex-col sm:flex-row justify-between items-center sm:items-end mt-4 sm:mt-0 gap-4">
-<button class="text-accent hover:text-text-charcoal text-xs font-medium tracking-wide border-b border-accent/30 hover:border-text-charcoal pb-0.5 transition-colors uppercase">
-                                Modificar
-                            </button>
-<div class="flex items-center gap-8">
-<div class="flex items-center gap-3">
-<button class="size-8 flex items-center justify-center rounded-full border border-accent/20 text-accent hover:border-accent hover:bg-accent hover:text-white transition-all">
-<span class="material-symbols-outlined text-[16px]">remove</span>
-</button>
-<span class="w-6 text-center text-text-charcoal font-medium text-lg">1</span>
-<button class="size-8 flex items-center justify-center rounded-full border border-accent/20 text-accent hover:border-accent hover:bg-accent hover:text-white transition-all">
-<span class="material-symbols-outlined text-[16px]">add</span>
-</button>
-</div>
-<p class="text-text-charcoal text-lg font-serif font-medium tabular-nums min-w-[80px] text-right">$65.00</p>
+<p class="text-text-charcoal text-lg font-serif font-medium tabular-nums min-w-[80px] text-right">$109.00</p>
 </div>
 </div>
 </div>
@@ -185,38 +126,14 @@
 <div class="bg-[#FDFBF9] rounded-xl p-8 sticky top-28 border border-[#EAE4D8]">
 <h3 class="text-2xl font-serif font-medium text-text-charcoal mb-8 border-b border-[#EAE4D8] pb-4">Resumen de Pago</h3>
 <div class="space-y-4 mb-8">
-<div class="flex justify-between text-gray-600 text-sm">
-<span class="font-medium">Subtotal</span>
-<span class="text-text-charcoal font-medium tabular-nums">$330.00</span>
-</div>
-<div class="flex justify-between text-gray-600 text-sm">
-<span class="font-medium">Costo de envío</span>
-<span class="text-accent font-medium">Gratis</span>
-</div>
-<div class="flex justify-between text-gray-600 text-sm">
-<span class="font-medium">Impuestos (16%)</span>
-<span class="text-text-charcoal font-medium tabular-nums">$52.80</span>
-</div>
-</div>
 <div class="flex justify-between items-baseline mb-8">
 <span class="text-lg font-serif font-medium text-text-charcoal">Total</span>
-<span class="text-3xl font-serif font-medium text-text-charcoal tabular-nums">$382.80</span>
-</div>
-<div class="mb-8">
-<div class="flex gap-2">
-<input class="flex-1 bg-white border border-[#DDD6CC] rounded-lg px-4 py-3 text-sm focus:border-accent focus:ring-1 focus:ring-accent outline-none transition-all placeholder:text-gray-400 font-light" placeholder="Código promocional" type="text"/>
-<button class="bg-[#EAE4D8] hover:bg-[#DDD6CC] text-text-charcoal font-medium px-5 py-2 rounded-lg text-sm transition-colors tracking-wide">
-                                Aplicar
-                            </button>
-</div>
+<span class="text-3xl font-serif font-medium text-text-charcoal tabular-nums">$109.00</span>
 </div>
 <a href="./registerOrder.html" class="w-full bg-primary hover:bg-[#222222] text-text-beige-light font-bold py-4 px-6 rounded-lg shadow-lg shadow-black/10 transition-all hover:scale-[1.01] active:scale-[0.99] flex items-center justify-center gap-2 group">
 <span class="tracking-widest uppercase text-sm">Confirmar Pedido</span>
 <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
 </a>
-<p class="text-center text-[10px] text-gray-400 mt-6 tracking-wider uppercase font-medium">
-                        Love at first crêpe
-                    </p>
 </div>
 </div>
 </div>
@@ -226,7 +143,7 @@
 <div class="flex items-center gap-3">
 <span class="text-text-charcoal font-bold text-2xl font-serif tracking-wide">MARÉE</span>
 <span class="text-gray-400 text-sm font-light">|</span>
-<span class="text-gray-500 text-sm font-light tracking-wide">Boutique de Postres &amp; Bebidas</span>
+<span class="text-gray-500 text-sm font-light tracking-wide">Love at first crêpe</span>
 </div>
 <div class="flex gap-8">
 <a class="text-gray-400 hover:text-primary transition-colors" href="#">

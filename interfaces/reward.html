@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MARÉE Admin Loyalty Config V1</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&amp;family=Lato:wght@300;400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#6f96aa", // Steel Blue from palette
+                        secondary: "#eddcdb", // Powder Pink from palette
+                        accent: "#d1cfc6", // Sand Beige from palette
+                        charcoal: "#393735", // Dark Charcoal from palette
+                        "background-light": "#fdfbf7", // Very light off-white/beige for main bg
+                        "background-dark": "#1f1e1d", // Dark mode bg
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#2d2b29",
+                    },
+                    fontFamily: {
+                        display: ["'Playfair Display'", "serif"],
+                        body: ["'Lato'", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-body text-charcoal dark:text-gray-200 antialiased min-h-screen flex transition-colors duration-200">
+<aside class="w-72 bg-charcoal dark:bg-black text-white flex flex-col fixed h-full shadow-xl z-20 transition-colors duration-200 hidden md:flex">
+<div class="p-8 text-center border-b border-gray-700">
+<h1 class="font-display text-4xl tracking-wide uppercase mb-2">MARÉE</h1>
+<p class="text-xs uppercase tracking-[0.2em] text-gray-400 font-light">— Love at first crêpe —</p>
+</div>
+<nav class="flex-1 overflow-y-auto py-8 px-4 space-y-2">
+<a class="flex items-center gap-4 px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-lg transition-colors group" href="#">
+<span class="material-icons text-gray-400 group-hover:text-primary transition-colors">dashboard</span>
+<span class="font-light tracking-wide">Panel General</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-lg transition-colors group" href="#">
+<span class="material-icons text-gray-400 group-hover:text-primary transition-colors">people</span>
+<span class="font-light tracking-wide">Clientes</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 bg-gray-800 text-white rounded-lg shadow-inner group border-l-4 border-primary" href="#">
+<span class="material-icons text-primary">loyalty</span>
+<span class="font-medium tracking-wide">Recompensas</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-lg transition-colors group" href="#">
+<span class="material-icons text-gray-400 group-hover:text-primary transition-colors">restaurant_menu</span>
+<span class="font-light tracking-wide">Menú</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-lg transition-colors group" href="#">
+<span class="material-icons text-gray-400 group-hover:text-primary transition-colors">settings</span>
+<span class="font-light tracking-wide">Configuración</span>
+</a>
+</nav>
+<div class="p-6 border-t border-gray-700">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-display text-lg">A</div>
+<div>
+<p class="text-sm font-medium text-white">Admin Marée</p>
+<p class="text-xs text-gray-400">admin@maree.com</p>
+</div>
+</div>
+</div>
+</aside>
+<header class="md:hidden fixed w-full bg-charcoal dark:bg-black text-white z-20 flex justify-between items-center p-4 shadow-md">
+<h1 class="font-display text-2xl tracking-wide uppercase">MARÉE</h1>
+<button class="text-white focus:outline-none">
+<span class="material-icons">menu</span>
+</button>
+</header>
+<main class="flex-1 md:ml-72 p-6 md:p-12 pt-20 md:pt-12 transition-all">
+<div class="max-w-5xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-center justify-between mb-10 gap-4">
+<div>
+<h2 class="font-display text-4xl text-charcoal dark:text-white mb-2">Configuración de Recompensas</h2>
+<p class="text-gray-500 dark:text-gray-400 font-light">Administra los parámetros del programa de lealtad.</p>
+</div>
+<div class="flex gap-3">
+<button class="px-4 py-2 bg-white dark:bg-surface-dark border border-gray-300 dark:border-gray-600 rounded-md text-sm text-charcoal dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 transition shadow-sm font-medium">
+                        Cancelar
+                    </button>
+<button class="px-6 py-2 bg-primary text-white rounded-md text-sm shadow-md hover:bg-opacity-90 transition font-medium flex items-center gap-2">
+<span class="material-icons text-sm">save</span>
+                        Guardar Cambios
+                    </button>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="lg:col-span-2 space-y-6">
+<div class="bg-white dark:bg-surface-dark rounded-xl shadow-lg border border-gray-100 dark:border-gray-700 overflow-hidden">
+<div class="p-6 md:p-8 space-y-8">
+<div class="flex items-center justify-between border-b border-gray-100 dark:border-gray-700 pb-4">
+<h3 class="font-display text-xl text-charcoal dark:text-white">Detalles de la Recompensa</h3>
+<div class="flex items-center gap-3">
+<span class="text-sm text-gray-500 dark:text-gray-400 font-medium">Activar Recompensa</span>
+<button class="relative inline-flex h-6 w-11 items-center rounded-full bg-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
+<span class="translate-x-6 inline-block h-4 w-4 transform rounded-full bg-white transition-transform"></span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="col-span-1 md:col-span-2">
+<label class="block text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2" for="reward-name">Nombre de la Recompensa</label>
+<input class="w-full bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded-lg px-4 py-3 text-charcoal dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition outline-none font-light" id="reward-name" placeholder="Ej. Crepa Gratis de Cumpleaños" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2" for="visits">Visitas Requeridas</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-icons text-gray-400 text-lg">confirmation_number</span>
+</div>
+<input class="w-full pl-10 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded-lg px-4 py-3 text-charcoal dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition outline-none font-light" id="visits" type="number" value="10"/>
+</div>
+</div>
+<div>
+<label class="block text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2" for="product">Producto de Regalo</label>
+<div class="relative">
+<select class="w-full bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded-lg px-4 py-3 text-charcoal dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition outline-none font-light appearance-none" id="product">
+<option>Crepa Dulce Clásica</option>
+<option>Bebida Caliente</option>
+<option>Crepa Salada Especial</option>
+<option>Postre de Temporada</option>
+</select>
+<div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+<span class="material-icons text-gray-400">expand_more</span>
+</div>
+</div>
+</div>
+<div class="col-span-1 md:col-span-2">
+<label class="block text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2" for="description">Descripción para el Cliente</label>
+<textarea class="w-full bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded-lg px-4 py-3 text-charcoal dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition outline-none font-light" id="description" placeholder="Describe los términos de la recompensa..." rows="4"></textarea>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-secondary bg-opacity-30 dark:bg-opacity-20 border border-secondary rounded-lg p-4 flex items-start gap-3">
+<span class="material-icons text-charcoal dark:text-secondary opacity-70 mt-0.5">info</span>
+<div>
+<h4 class="font-display font-medium text-charcoal dark:text-white mb-1">Nota Importante</h4>
+<p class="text-sm text-gray-700 dark:text-gray-300 font-light leading-relaxed">
+                                Los cambios realizados en las recompensas se reflejarán inmediatamente en la aplicación del cliente. Asegúrese de tener inventario suficiente del producto seleccionado como regalo.
+                            </p>
+</div>
+</div>
+</div>
+<div class="lg:col-span-1 space-y-6">
+<div class="bg-white dark:bg-surface-dark rounded-xl shadow-lg border border-gray-100 dark:border-gray-700 p-6 md:p-8">
+<h3 class="font-display text-xl text-charcoal dark:text-white mb-6 border-b border-gray-100 dark:border-gray-700 pb-4">Vigencia</h3>
+<div class="space-y-4">
+<div>
+<label class="block text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">Fecha de Inicio</label>
+<div class="relative">
+<input class="w-full bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded-lg px-4 py-3 text-charcoal dark:text-white focus:ring-2 focus:ring-primary outline-none font-light" type="date"/>
+</div>
+</div>
+<div>
+<label class="block text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">Fecha de Finalización</label>
+<div class="relative">
+<input class="w-full bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded-lg px-4 py-3 text-charcoal dark:text-white focus:ring-2 focus:ring-primary outline-none font-light" type="date"/>
+</div>
+</div>
+<div class="pt-2">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="form-checkbox h-5 w-5 text-primary border-gray-300 rounded focus:ring-primary transition" type="checkbox"/>
+<span class="text-sm text-gray-600 dark:text-gray-300 font-light group-hover:text-charcoal dark:group-hover:text-white transition">Sin fecha de expiración</span>
+</label>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<div class="fixed bottom-6 right-6 z-50">
+<button class="bg-charcoal dark:bg-white text-white dark:text-charcoal p-3 rounded-full shadow-lg hover:scale-110 transition-transform duration-200" onclick="document.documentElement.classList.toggle('dark')">
+<span class="material-icons block dark:hidden">dark_mode</span>
+<span class="material-icons hidden dark:block">light_mode</span>
+</button>
+</div>
+
+</body></html>

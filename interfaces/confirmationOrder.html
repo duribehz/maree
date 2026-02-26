@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MARÉE Confirmación de Pedido</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Lato:wght@300;400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#6A96AD", // Steel Blue from palette
+              secondary: "#EDD6D6", // Blush pink from palette
+              charcoal: "#3E3C38", // Dark Charcoal from palette
+              sand: "#D3D0C5", // Sand beige from palette (darker variant for borders/accents)
+              "background-light": "#F5F3EF", // Very light beige/off-white for main bg
+              "background-dark": "#2A2826", // Dark charcoal variant for dark mode bg
+              "surface-light": "#FFFFFF",
+              "surface-dark": "#3E3C38",
+            },
+            fontFamily: {
+              serif: ["Playfair Display", "serif"],
+              sans: ["Lato", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+            },
+            animation: {
+                'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                'scale-in': 'scaleIn 0.6s ease-out forwards',
+            },
+            keyframes: {
+                fadeInUp: {
+                    '0%': { opacity: '0', transform: 'translateY(20px)' },
+                    '100%': { opacity: '1', transform: 'translateY(0)' },
+                },
+                scaleIn: {
+                    '0%': { opacity: '0', transform: 'scale(0.9)' },
+                    '100%': { opacity: '1', transform: 'scale(1)' },
+                }
+            }
+          },
+        },
+      };
+    </script>
+<style>body {
+            font-feature-settings: "kern", "liga";
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen flex flex-col items-center justify-center p-6 text-charcoal dark:text-gray-100 font-sans transition-colors duration-300">
+<main class="w-full max-w-lg bg-surface-light dark:bg-surface-dark shadow-xl rounded-none md:rounded-lg overflow-hidden relative animate-fade-in-up border border-sand/30 dark:border-gray-700">
+<div class="h-1.5 w-full flex">
+<div class="w-1/4 bg-charcoal"></div>
+<div class="w-1/4 bg-primary"></div>
+<div class="w-1/4 bg-secondary"></div>
+<div class="w-1/4 bg-sand"></div>
+</div>
+<div class="p-10 md:p-14 text-center flex flex-col items-center">
+<div class="mb-8 animate-scale-in" style="animation-delay: 0.1s;">
+<h1 class="font-serif text-5xl md:text-6xl tracking-widest text-charcoal dark:text-white mb-2">MARÉE</h1>
+<div class="flex items-center justify-center text-xs md:text-sm tracking-[0.2em] text-gray-500 dark:text-gray-400 font-light uppercase">
+<span class="w-8 h-[1px] bg-gray-400 dark:bg-gray-600 mr-3"></span>
+<span>Love at first crêpe</span>
+<span class="w-8 h-[1px] bg-gray-400 dark:bg-gray-600 ml-3"></span>
+</div>
+</div>
+<div class="mb-8 relative animate-scale-in" style="animation-delay: 0.3s;">
+<div class="w-24 h-24 rounded-full bg-primary/10 dark:bg-primary/20 flex items-center justify-center mx-auto mb-4">
+<span class="material-icons text-6xl text-primary">check</span>
+</div>
+</div>
+<div class="space-y-4 animate-fade-in-up" style="animation-delay: 0.4s;">
+<h2 class="font-serif text-2xl md:text-3xl text-charcoal dark:text-white font-medium">
+                    ¡Pedido realizado con éxito!
+                </h2>
+<p class="text-gray-600 dark:text-gray-300 font-light text-lg max-w-xs mx-auto leading-relaxed">
+                    Tu orden está siendo preparada con dedicación. <br/>
+<span class="italic font-serif text-primary">¡Disfrútala!</span>
+</p>
+</div>
+<div class="mt-10 w-full border-t border-dashed border-gray-300 dark:border-gray-600 pt-6 animate-fade-in-up" style="animation-delay: 0.5s;">
+<div class="flex justify-between items-center text-sm text-gray-500 dark:text-gray-400 font-mono mb-2">
+<span>Nº Orden</span>
+<span>#8392-MA</span>
+</div>
+<div class="flex justify-between items-center text-sm text-gray-500 dark:text-gray-400 font-mono">
+<span>Tiempo estimado</span>
+<span>25-35 min</span>
+</div>
+</div>
+<div class="mt-12 w-full animate-fade-in-up" style="animation-delay: 0.6s;">
+<a class="group relative inline-flex w-full items-center justify-center px-8 py-3.5 text-base font-medium tracking-wide text-charcoal dark:text-white transition-all duration-300 ease-in-out bg-transparent border border-charcoal dark:border-gray-400 hover:bg-charcoal hover:text-white dark:hover:bg-white dark:hover:text-charcoal focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:focus:ring-offset-gray-800 uppercase rounded-sm" href="#">
+<span class="absolute left-0 w-0 h-full transition-all duration-300 ease-in-out bg-charcoal dark:bg-white opacity-10 group-hover:w-full"></span>
+<span>Volver al Inicio</span>
+</a>
+<div class="mt-6">
+<a class="text-sm text-gray-400 hover:text-primary dark:text-gray-500 dark:hover:text-primary transition-colors duration-200 border-b border-transparent hover:border-primary" href="#">
+                        Ver detalles del pedido
+                    </a>
+</div>
+</div>
+</div>
+</main>
+<footer class="mt-12 text-center opacity-60">
+<p class="font-serif text-xs tracking-widest text-gray-500 dark:text-gray-400">EST. 2024 — PARIS / NORDIC FUSION</p>
+</footer>
+
+</body></html>

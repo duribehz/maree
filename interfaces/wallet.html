@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MARÉE Vista Previa Wallet V3.2</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Lato:wght@300;400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#ECCFCF", // Powder pink from palette
+                        secondary: "#7398AE", // Blue from palette
+                        accent: "#D1D0C3", // Beige from palette
+                        charcoal: "#3E3C3A", // Dark charcoal from palette
+                        "background-light": "#F5F5F0", // Sand beige
+                        "background-dark": "#1A1A1A", // Dark mode background
+                        "card-dark": "#2A2A2A", // Dark mode card bg
+                        "text-light": "#3E3C3A", // Charcoal for light mode text
+                        "text-dark": "#E5E5E5", // Light grey for dark mode text
+                    },
+                    fontFamily: {
+                        display: ["'Playfair Display'", "serif"],
+                        body: ["'Lato'", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "12px",
+                        "xl": "20px",
+                        "2xl": "24px",
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 40px -10px rgba(0,0,0,0.08)',
+                        'card': '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+                        'inner-light': 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
+                    }
+                },
+            },
+        };
+    </script>
+<style>
+        body {
+            font-family: 'Lato', sans-serif;
+        }
+        .logo-font {
+            font-family: 'Playfair Display', serif;
+        }.crepe-stamp {
+            mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z'/%3E%3C/svg%3E");
+            -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z'/%3E%3C/svg%3E");
+            mask-repeat: no-repeat;
+            -webkit-mask-repeat: no-repeat;
+            mask-position: center;
+            -webkit-mask-position: center;
+            mask-size: contain;
+            -webkit-mask-size: contain;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen flex items-center justify-center p-4 transition-colors duration-300">
+<div class="relative w-full max-w-sm bg-white dark:bg-black rounded-[40px] shadow-2xl overflow-hidden border-8 border-gray-900 dark:border-gray-700">
+<div class="bg-background-light dark:bg-black px-6 py-3 flex justify-between items-center text-xs font-medium text-gray-900 dark:text-white z-20 relative">
+<span>10:43</span>
+<div class="flex items-center space-x-1">
+<span class="material-icons text-[14px]">signal_cellular_alt</span>
+<span class="material-icons text-[14px]">wifi</span>
+<span class="material-icons text-[14px]">battery_full</span>
+</div>
+</div>
+<div class="bg-background-light dark:bg-black px-4 py-2 flex justify-between items-center relative z-20">
+<button class="w-8 h-8 rounded-full bg-gray-200 dark:bg-gray-800 flex items-center justify-center text-charcoal dark:text-white transition-colors">
+<span class="material-icons text-sm">close</span>
+</button>
+<button class="w-8 h-8 rounded-full bg-gray-200 dark:bg-gray-800 flex items-center justify-center text-charcoal dark:text-white transition-colors">
+<span class="material-icons text-sm">more_horiz</span>
+</button>
+</div>
+<div class="bg-background-light dark:bg-black relative px-5 pb-8 pt-2 h-full flex flex-col items-center">
+<div class="w-full bg-charcoal dark:bg-card-dark rounded-2xl shadow-card overflow-hidden flex flex-col relative aspect-[4/5.5]">
+<div class="p-6 flex flex-col items-center justify-center bg-charcoal dark:bg-card-dark border-b border-gray-700 dark:border-gray-600">
+<h1 class="logo-font text-4xl text-primary tracking-wide">MARÉE</h1>
+<p class="text-[10px] tracking-[0.2em] text-accent mt-2 uppercase text-center font-light">— Love at first crêpe —</p>
+</div>
+<div class="flex-grow p-6 bg-charcoal dark:bg-card-dark">
+<div class="grid grid-cols-5 gap-3 mb-6">
+<div class="aspect-square rounded-full bg-white/5 flex items-center justify-center relative border border-primary/20">
+<span class="material-icons text-primary text-xl">bakery_dining</span>
+</div>
+<div class="aspect-square rounded-full bg-white/5 flex items-center justify-center relative border border-primary/20">
+<span class="material-icons text-primary text-xl">bakery_dining</span>
+</div>
+<div class="aspect-square rounded-full bg-white/5 flex items-center justify-center relative border border-primary/20">
+<span class="material-icons text-primary text-xl">bakery_dining</span>
+</div>
+<div class="aspect-square rounded-full bg-white/5 flex items-center justify-center relative border border-primary/20">
+<span class="material-icons text-primary text-xl">bakery_dining</span>
+</div>
+<div class="aspect-square rounded-full bg-white/5 flex items-center justify-center relative border border-primary/20">
+<span class="material-icons text-primary text-xl">bakery_dining</span>
+</div>
+<div class="aspect-square rounded-full bg-white/5 flex items-center justify-center relative border border-primary/20">
+<span class="material-icons text-primary text-xl">bakery_dining</span>
+</div>
+<div class="aspect-square rounded-full bg-white/5 flex items-center justify-center relative border border-primary/20">
+<span class="material-icons text-primary text-xl">bakery_dining</span>
+</div>
+<div class="aspect-square rounded-full bg-white/5 flex items-center justify-center relative border border-white/10 border-dashed">
+<span class="material-icons text-white/20 text-xl">bakery_dining</span>
+</div>
+<div class="aspect-square rounded-full bg-white/5 flex items-center justify-center relative border border-white/10 border-dashed">
+<span class="material-icons text-white/20 text-xl">bakery_dining</span>
+</div>
+<div class="aspect-square rounded-full bg-white/5 flex items-center justify-center relative border border-white/10 border-dashed">
+<span class="material-icons text-white/20 text-xl">bakery_dining</span>
+</div>
+</div>
+<div class="flex justify-between items-start mt-4">
+<div class="flex flex-col">
+<span class="text-[9px] uppercase tracking-wider text-secondary font-bold mb-1">Sellos Acumulados</span>
+<span class="logo-font text-2xl text-accent">7 sellos</span>
+</div>
+<div class="flex flex-col text-right">
+<span class="text-[9px] uppercase tracking-wider text-secondary font-bold mb-1">Recompensas</span>
+<span class="logo-font text-2xl text-accent">0 premios</span>
+</div>
+</div>
+</div>
+<div class="bg-white p-4 flex flex-col items-center justify-center relative mt-auto">
+<img alt="QR Code for Loyalty" class="w-full h-16 object-contain opacity-90 mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCplU0cbo3U9MvOTvPCjoX7WKdtS9tna6FUsPj-9X2LdZnh3_hKse3Lv7vNy0bqy73P1zlwMJV8-_NIDvo5zOOhjPnln9NfkoCC1gqVeCxCRsmAZDqYqG6WcDi-jrqrMYuqB7bAuFvH3ILEinJY_ywsUa86WzTnL-taNJUhZpqUCwvDASSnpxEh94PlUhzanQweZ2ISr1icd6rdi01RRPoMCFb_B5uWN8smcrt0mcN--5x6zyrIHOegOD_gpY-2y3MZ1oslrOdJRbpj"/>
+<p class="text-[10px] text-gray-400 mt-2 font-mono uppercase tracking-widest">Powered by Loyalz</p>
+</div>
+</div>
+<button class="mt-8 w-full bg-black text-white rounded-xl py-3 px-4 flex items-center justify-center space-x-2 shadow-lg hover:bg-gray-900 transition-transform active:scale-95 border border-gray-800 dark:border-gray-600">
+<svg class="w-6 h-6 fill-current" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><path d="M439.5,236.8c0-10.3,5-19.5,12.7-25.5c-4.9-7-10.7-13.4-17.3-18.9c-8.9-7.5-23.3-17.8-46.7-18c-19.4-0.1-37.4,11.2-47.5,11.2c-10.3,0-26.6-10.8-43.8-10.5c-22.3,0.3-43.2,13-54.8,33.1c-23.7,40.9-6.1,101.5,16.9,134.8c11.3,16.3,24.8,34.6,42.5,33.9c17-0.7,23.5-11,44.1-11c20.5,0,26.4,11,44.4,10.7c18.3-0.3,30-16.6,41.2-33c13-18.9,18.3-37.3,18.5-38.2C439,305.1,439.5,236.8,439.5,236.8z M330.6,155.6c11.8-14.3,19.8-34.1,17.6-54c-17,0.7-37.6,11.4-49.8,25.6c-10.9,12.6-20.5,32.8-17.9,52.2C300.7,180.7,319.9,170.8,330.6,155.6z"></path></svg>
+<span class="font-medium text-sm">Add to Apple Wallet</span>
+</button>
+<div class="mt-6 text-center px-6">
+<p class="text-charcoal dark:text-gray-300 text-xs font-light leading-relaxed">
+                    Guarda tu tarjeta en Apple Wallet para acumular sellos más rápido en tu próxima visita.
+                </p>
+<div class="mt-4 flex justify-center">
+<div class="h-1 w-32 bg-gray-300 dark:bg-gray-700 rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>

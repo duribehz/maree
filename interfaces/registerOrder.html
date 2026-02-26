@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MARÉE Opciones de Entrega</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Lato:wght@300;400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#3e3a35", // Charcoal Black from palette
+                        "accent-blue": "#6d97b0", // Steel Blue from palette
+                        "accent-pink": "#ebd4d4", // Powder Pink from palette
+                        "accent-beige": "#d5d2c6", // Sand Beige from palette
+                        "background-light": "#fdfbf7", // Lighter beige for main background
+                        "background-dark": "#1a1a1a", // Dark mode background
+                        "card-dark": "#2d2d2d", // Dark mode card background
+                    },
+                    fontFamily: {
+                        display: ["Playfair Display", "serif"],
+                        body: ["Lato", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        'xl': "1rem",
+                        '2xl': "1.5rem",
+                    },
+                },
+            },
+        };
+    </script>
+<style>input[type="radio"]:checked + div {
+            border-color: #6d97b0;background-color: #fdf2f2;}.dark input[type="radio"]:checked + div {
+            border-color: #6d97b0;
+            background-color: #3e3a35;
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-primary dark:text-gray-200 font-body transition-colors duration-300 min-h-screen flex flex-col items-center justify-center p-4 md:p-8">
+<header class="w-full max-w-4xl mx-auto flex justify-center mb-10 fade-in">
+<div class="text-center">
+<h1 class="text-5xl md:text-6xl tracking-widest font-display text-primary dark:text-white uppercase mb-2">Marée</h1>
+<div class="flex items-center justify-center text-xs md:text-sm tracking-[0.3em] text-gray-500 dark:text-gray-400 uppercase">
+<span class="mr-2">—</span> Love at first crêpe <span class="ml-2">—</span>
+</div>
+</div>
+</header>
+<main class="w-full max-w-2xl bg-white dark:bg-card-dark rounded-2xl shadow-xl overflow-hidden border border-accent-beige dark:border-gray-700 fade-in" style="animation-delay: 0.1s;">
+<div class="p-8 md:p-12">
+<h2 class="text-3xl font-display text-center mb-10 text-primary dark:text-white">¿Cómo recibirás tu pedido?</h2>
+<form action="#" class="space-y-8" method="POST">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<label class="cursor-pointer group relative">
+<input checked="" class="peer sr-only" name="delivery_type" type="radio" value="table"/>
+<div class="h-full p-6 rounded-xl border-2 border-transparent bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all duration-300 flex flex-col items-center justify-center text-center group-hover:shadow-md">
+<div class="w-16 h-16 rounded-full bg-accent-beige/30 dark:bg-gray-700 flex items-center justify-center mb-4 text-primary dark:text-white group-hover:scale-110 transition-transform">
+<span class="material-icons-outlined text-3xl">restaurant</span>
+</div>
+<h3 class="text-xl font-display font-semibold mb-2 text-primary dark:text-white">Para Mesa</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400">Servicio a tu mesa</p>
+</div>
+<div class="absolute top-4 right-4 text-accent-blue opacity-0 peer-checked:opacity-100 transition-opacity">
+<span class="material-icons-outlined">check_circle</span>
+</div>
+</label>
+<label class="cursor-pointer group relative">
+<input class="peer sr-only" name="delivery_type" type="radio" value="pickup"/>
+<div class="h-full p-6 rounded-xl border-2 border-transparent bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all duration-300 flex flex-col items-center justify-center text-center group-hover:shadow-md">
+<div class="w-16 h-16 rounded-full bg-accent-beige/30 dark:bg-gray-700 flex items-center justify-center mb-4 text-primary dark:text-white group-hover:scale-110 transition-transform">
+<span class="material-icons-outlined text-3xl">shopping_bag</span>
+</div>
+<h3 class="text-xl font-display font-semibold mb-2 text-primary dark:text-white">Para Recoger</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400">Listo en 15-20 min</p>
+</div>
+<div class="absolute top-4 right-4 text-accent-blue opacity-0 peer-checked:opacity-100 transition-opacity">
+<span class="material-icons-outlined">check_circle</span>
+</div>
+</label>
+</div>
+<div class="mt-8 pt-6 border-t border-gray-100 dark:border-gray-700 transition-all duration-500" id="table-input-section">
+<label class="block text-center text-sm uppercase tracking-wider font-semibold text-gray-500 dark:text-gray-400 mb-4" for="table-number">Número de Mesa</label>
+<div class="flex justify-center items-center space-x-4">
+<button class="w-10 h-10 rounded-full border border-gray-300 dark:border-gray-600 flex items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors text-primary dark:text-white" onclick="decrementTable()" type="button">
+<span class="material-icons-outlined text-sm">remove</span>
+</button>
+<input class="w-20 text-center text-2xl font-display font-bold border-b-2 border-accent-blue bg-transparent focus:outline-none focus:border-primary dark:text-white p-2 appearance-none" id="table-number" max="50" min="1" type="number" value="4"/>
+<button class="w-10 h-10 rounded-full border border-gray-300 dark:border-gray-600 flex items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors text-primary dark:text-white" onclick="incrementTable()" type="button">
+<span class="material-icons-outlined text-sm">add</span>
+</button>
+</div>
+</div>
+<div class="pt-6">
+<a href="./confirmationOrder.html" class="w-full bg-primary hover:bg-gray-800 text-white font-bold py-4 px-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center group uppercase tracking-widest text-sm" type="submit">
+<span>Ordenar Ahora</span>
+<span class="material-icons-outlined ml-2 group-hover:translate-x-1 transition-transform text-lg">arrow_forward</span>
+</a>
+</div>
+</form>
+</div>
+<div class="h-2 w-full bg-gradient-to-r from-accent-blue via-accent-pink to-accent-beige"></div>
+</main>
+<footer class="mt-12 text-center text-gray-400 dark:text-gray-600 text-xs">
+<p>© 2023 Marée. Todos los derechos reservados.</p>
+</footer>
+<script>
+        const tableInputSection = document.getElementById('table-input-section');
+        const radioButtons = document.getElementsByName('delivery_type');
+        const tableNumberInput = document.getElementById('table-number');
+        // Initial check
+        updateVisibility();
+        // Add event listeners
+        radioButtons.forEach(radio => {
+            radio.addEventListener('change', updateVisibility);
+        });
+        function updateVisibility() {
+            const selectedValue = document.querySelector('input[name="delivery_type"]:checked').value;
+            if (selectedValue === 'table') {
+                tableInputSection.style.display = 'block';
+                tableInputSection.style.opacity = '1';
+                tableInputSection.style.transform = 'translateY(0)';
+            } else {
+                tableInputSection.style.display = 'none';
+                tableInputSection.style.opacity = '0';
+                tableInputSection.style.transform = 'translateY(-10px)';
+            }
+        }
+        function incrementTable() {
+            let val = parseInt(tableNumberInput.value);
+            if (val < 50) tableNumberInput.value = val + 1;
+        }
+        function decrementTable() {
+            let val = parseInt(tableNumberInput.value);
+            if (val > 1) tableNumberInput.value = val - 1;
+        }
+    </script>
+
+</body></html>
